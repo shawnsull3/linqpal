@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
           <Switch>
-            <Route exact path="/" render={() => <Redirect to="/login" />} />
+            <Route exact path="/" render={() => <Redirect to="/home" />} />
             <Route path="/login" component={Login} />
             <Route path="/admin" component={Admin} />
             <Route path="/home" component={Client} />
