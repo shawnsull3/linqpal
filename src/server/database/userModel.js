@@ -5,12 +5,12 @@ const userSchema = mongoose.Schema({
     password: String,
     firstName: String,
     lastName: String,
-    phoneNumber: Number,
+    phoneNumber: String,
     address: String,
     city: String,
     state: String,
     zip: Number,
-    SSN: Number,
+    SSN: String,
     isAdmin: Boolean,
 });
 
