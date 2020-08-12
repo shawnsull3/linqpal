@@ -9,7 +9,7 @@ const userSchema = mongoose.Schema({
     address: String,
     city: String,
     state: String,
-    zip: Number,
+    zip: String,
     SSN: String,
     isAdmin: Boolean,
 });
