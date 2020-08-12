@@ -8,6 +8,10 @@ const getUserData = async (username) => {
   return await User.find({ username: username });
 }
 
+const getAllUserData = async () => {
+    return await User.find();
+}
+
 const createNewUser = async (userData) => {
     try {
       const newUser = new User(userData);
@@ -29,5 +33,6 @@ db.once('open', () => {
 
 module.exports = {
   getUserData,
+  getAllUserData,
   createNewUser,
 }
