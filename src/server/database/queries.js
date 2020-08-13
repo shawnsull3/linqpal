@@ -8,8 +8,8 @@ const getUserData = async (username) => {
   return await User.find({ username: username });
 }
 
-const getAllUserData = async () => {
-    return await User.find();
+const getAllUserData = () => {
+    return User.find();
 }
 
 const createNewUser = async (userData) => {
