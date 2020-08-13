@@ -9,6 +9,10 @@ html {
   background-color: whitesmoke;
 }
 
+h4 {
+  margin-top: 1rem !important;
+}
+
 .login-btn {
   margin-top: 3rem;
 }
@@ -47,4 +51,8 @@ input[type=number] {
 .table {
   width: 95% !important;
   margin: auto;
+}
+
+.error {
+  color: red;
 }
