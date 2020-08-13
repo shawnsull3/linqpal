@@ -1,5 +1,12 @@
+body,
+html {
+  background-color: whitesmoke;
+  font-family: 'PT Sans', sans-serif !important;
+}
+
 .App {
   text-align: center;
+  background-color: whitesmoke;
 }
 
 .login-btn {
