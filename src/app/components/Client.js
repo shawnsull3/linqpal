@@ -2,6 +2,8 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import CryptoJS from 'crypto-js';
+import { AES_Code } from '../../server/AES';
 
 import axios from 'axios';
  
@@ -31,9 +33,18 @@ class Client extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log('submitted')
-    // encrypt SSN
-    // axios post to server / database
+
+    const userData = this.state;
+    const encrypted = CryptoJS.AES.encrypt(this.state.SSN, AES_Code).toString();
+    userData.SSN = encrypted;
+
+    axios.post('http://localhost:4000/newUser', userData)
+      .then( res => {
+        console.log(res.data)
+      })
+      .catch((err) => {
+          console.log(err);
+      });
   }
 
   render() {
