@@ -1,20 +1,25 @@
 body,
 html {
-  background-color: whitesmoke;
+  background-color: #2C3539;
   font-family: 'PT Sans', sans-serif !important;
 }
 
 .App {
   text-align: center;
-  background-color: whitesmoke;
+  background-color: #2C3539
 }
 
 h4 {
   margin-top: 1rem !important;
+  color: white;
 }
 
 .login-btn {
   margin-top: 3rem;
+}
+
+.form-label {
+  color:  white;
 }
 
 .form {
