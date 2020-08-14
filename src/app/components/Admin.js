@@ -23,7 +23,6 @@ class Admin extends React.Component {
     }
     axios.get('http://localhost:4000/allUserData')
       .then( userData => {
-        console.log(userData.data)
         this.setState({userInfo: userData.data})
       })
       .catch((err) => {
@@ -37,7 +36,7 @@ class Admin extends React.Component {
       <div>
         <h4>User Infomation</h4>
         {accessAllowed ? 
-          <Table striped bordered hover variant="dark" className='user-table'>
+          <Table striped bordered hover className='user-table'>
             <thead>
               <tr>
                 <th>#</th>
